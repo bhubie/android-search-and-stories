@@ -12,7 +12,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -58,7 +57,6 @@ import com.duckduckgo.mobile.android.events.WebViewEvents.WebViewItemMenuClickEv
 import com.duckduckgo.mobile.android.events.WebViewEvents.WebViewOpenMenuEvent;
 import com.duckduckgo.mobile.android.events.WebViewEvents.WebViewReloadActionEvent;
 import com.duckduckgo.mobile.android.events.WebViewEvents.WebViewSearchOrGoToUrlEvent;
-import com.duckduckgo.mobile.android.events.WebViewEvents.WebViewSearchWebTermEvent;
 import com.duckduckgo.mobile.android.events.WebViewEvents.WebViewShowHistoryObjectEvent;
 import com.duckduckgo.mobile.android.events.deleteEvents.DeleteStoryInHistoryEvent;
 import com.duckduckgo.mobile.android.events.deleteEvents.DeleteUrlInHistoryEvent;
@@ -100,7 +98,6 @@ import com.duckduckgo.mobile.android.util.DDGUtils;
 import com.duckduckgo.mobile.android.util.DisplayStats;
 import com.duckduckgo.mobile.android.util.OnboardingHelper;
 import com.duckduckgo.mobile.android.util.PreferencesManager;
-import com.duckduckgo.mobile.android.util.ReadArticlesManager;
 import com.duckduckgo.mobile.android.util.SCREEN;
 import com.duckduckgo.mobile.android.util.SESSIONTYPE;
 import com.duckduckgo.mobile.android.util.Sharer;
@@ -118,7 +115,6 @@ import info.guardianproject.netcipher.proxy.OrbotHelper;
 public class DuckDuckGo extends AppCompatActivity {
 	protected final String TAG = "DuckDuckGo";
     private KeyboardService keyboardService;
-	private FrameLayout activityContainer;
     private FrameLayout fragmentContainer;
 
 	private FragmentManager fragmentManager;
@@ -210,7 +206,6 @@ public class DuckDuckGo extends AppCompatActivity {
             initializeContainer();
     	}
 
-        activityContainer = (FrameLayout) findViewById(R.id.activityContainer);
 		fragmentContainer = (FrameLayout) findViewById(R.id.fragmentContainer);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);

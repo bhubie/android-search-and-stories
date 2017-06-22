@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activityContainer"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <RelativeLayout
         android:id="@+id/main_container"
@@ -36,5 +37,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/black"/>
-
-</FrameLayout>
+</android.support.design.widget.CoordinatorLayout>
